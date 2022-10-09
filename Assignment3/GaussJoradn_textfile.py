@@ -5,7 +5,7 @@ def GJ_matrix():
     str_coeff=''#temporary string to read from file
     a=[]#temprory storing of numbers
     #Reading from file
-    with open("GJ_assignment3.txt") as file:
+    with open("Assignment3_Q1_data.txt") as file:
         while True:
 
             content = file.readline()
