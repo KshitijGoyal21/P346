@@ -1,7 +1,7 @@
 import numpy as np
 def LUdecomp():
-    a=[]
-    b=[]
+    a=[]#input matrix LHS
+    b=[]#input matrix RHS
     ctr=0
     str_coeff = ''#used to take input from file
     n = []  # temprory storing of numbers
