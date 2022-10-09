@@ -1,3 +1,4 @@
+#Question 1 Gauss Jordan
 def GJ_matrix():
     ctr = 0
     n=[]
@@ -47,7 +48,7 @@ def GJ_matrix():
         print(n[i][len(n)])
 
 
-def max(n, i):
+def max(n, i):#getting max element in array
     max = 0
     k = -1
     for j in range(i,len(n)):
@@ -57,7 +58,7 @@ def max(n, i):
     return k
 
 
-def swap(n, i, k):
+def swap(n, i, k):#swapping in array
     for j in range(0,len(n)+1):
         temp = n[i][j]
         n[i][j] = n[k][j]
@@ -81,7 +82,7 @@ GJ_matrix()
 #OUTPUT
 # Input augumented matrix
 # [[1, -1, 4, 0, 2, 9, 19], [0, 5, -2, 7, 8, 4, 2], [1, 0, 5, 7, 3, -2, 13], [6, -1, 2, 3, 0, 8, -7], [-4, 2, 0, 5, -5, 3, -9], [0, 7, -1, 5, 4, -2, 2]]
-# Output matrix
+# Output
 # -1.761817043997858
 # 0.8962280338740127
 # 4.051931404116157
