@@ -1,13 +1,14 @@
+#Question 2 Cholesky
 import rand_no_lcg2 as rg
 import numpy as np
 import matrix_multiply as mm
 import math
 def cholesky():
     ctr = 0
-    n = []
+    n = []# temprory storing of numbers
     str_coeff = ''
-    a = []  # temprory storing of numbers
-    b=[]
+    a = []  #input array LHS
+    b=[]#input array RHS
     # Reading from file
     with open("Assignment3_Q2_data.txt") as file:
       while True:
@@ -72,7 +73,7 @@ def cholesky():
 
 
 
-def pos_definite(a,seed):
+def pos_definite(a,seed):#positive definite
      x = np.zeros((len(a),1))
      x_temp=rg.rand_no(len(a),seed)
      for i in range(0,len(a)):
@@ -87,7 +88,7 @@ def pos_definite(a,seed):
          break
       else:
          pos_definite(a, seed + 1)
-def mat_mult(x1,x2):
+def mat_mult(x1,x2):#matrix multiplication
     y=[]
     for i in range(0,len(x1)):
         sum=0
