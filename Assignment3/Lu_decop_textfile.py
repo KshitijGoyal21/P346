@@ -7,7 +7,7 @@ def LUdecomp():
     str_coeff = ''#used to take input from file
     n = []  # temprory storing of numbers
     # Reading from file
-    with open("GJ_assignment3.txt") as file:
+    with open("Assignment3_Q1_data.txt") as file:
         while True:
 
             content = file.readline()
