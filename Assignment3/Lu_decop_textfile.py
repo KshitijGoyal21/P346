@@ -1,3 +1,4 @@
+#Question 3 LU decomposition
 import numpy as np
 def LUdecomp():
     a=[]#input matrix LHS
