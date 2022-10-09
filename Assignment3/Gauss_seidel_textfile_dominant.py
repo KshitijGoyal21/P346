@@ -1,3 +1,4 @@
+#Question 3 Gauss seidel with diagonal dominance included
 import rand_no_lcg2 as rg
 import numpy as np
 import matrix_multiply as mm
@@ -79,7 +80,7 @@ def gs():
 
                     e[i] = abs(-e[i] + x[i]) / abs(e[i])
                     # print(e[i])
-                    if e[i] < 0.000001:
+                    if e[i] < 0.000001:#setting precision
                         f = f + 1
                 e[i] = x[i]
     print("Output matrix")
@@ -89,7 +90,7 @@ def gs():
     #pos_definite(a,10)
 
 
-def pos_definite(a, seed):
+def pos_definite(a, seed):#For positive definite
     x = np.zeros((len(a), 1))
     x_temp = rg.rand_no(len(a), seed)
     for i in range(0, len(a)):
@@ -106,7 +107,7 @@ def pos_definite(a, seed):
             pos_definite(a, seed + 1)
 
 
-def mat_mult(x1, x2):
+def mat_mult(x1, x2):#matrix multiplication
     y = []
     for i in range(0, len(x1)):
         sum = 0
@@ -114,25 +115,25 @@ def mat_mult(x1, x2):
             sum += x1[j] * x2[i]
         y.append(sum)
     return y
-def swap(a,i,j):
+def swap(a,i,j):#swap for matrix a
     for k in range(0,len(a)):
         temp=a[i][k]
         a[i][k]=a[j][k]
         a[j][k]=temp
     return a
-def swap_b(b,i,j):
+def swap_b(b,i,j):#swap for matrix b
         temp2 = b[i]
         b[i] = b[j]
         b[j]=temp2
         return b
 
-def sum_row(x,sub):
+def sum_row(x,sub):#sum of elements of row without element sub
     sum=0
     for i in range(0, len(x)):
         sum+=abs(x[i])
     sum=sum-sub
     return sum
-def is_symmetric(a):
+def is_symmetric(a):#to check for symmetric matrix
     for i in range(0, len(a)):
         for j in range(i, len(a)):
             if a[i][j] != a[j][i]:
