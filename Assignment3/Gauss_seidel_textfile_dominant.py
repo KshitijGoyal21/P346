@@ -4,10 +4,10 @@ import numpy as np
 import matrix_multiply as mm
 def gs():
     ctr = 0
-    n = []
+    n = []# temprory storing of numbers
     str_coeff = ''
-    a = []  # temprory storing of numbers
-    b=[]
+    a = []  #input matrix LHS
+    b=[]#input matrix RHS
     # Reading from file
     with open("Assignment3_Q3_data.txt") as file:
       while True:
