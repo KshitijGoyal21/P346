@@ -3,10 +3,10 @@ import rand_no_lcg2 as rg
 import numpy as np
 def gs():
     ctr = 0
-    n = []
+    n = []# temprory storing of numbers
     str_coeff = ''#used to take input from file
-    a = []  # temprory storing of numbers
-    b=[]
+    a = []  #Input Matrix for LHS
+    b=[]#Input Matrix for RHS
     # Reading from file
     with open("Assignment3_Q2_data.txt") as file:
       while True:
