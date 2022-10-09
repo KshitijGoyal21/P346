@@ -1,3 +1,4 @@
+#Question 2 Gauss seidel
 import rand_no_lcg2 as rg
 import numpy as np
 def gs():
@@ -70,7 +71,7 @@ def gs():
 
                     e[i] = abs(-e[i] + x[i]) / abs(e[i])
                     # print(e[i])
-                    if e[i] < 0.000001:
+                    if e[i] < 0.000001:#10^-6 precision
                         f = f + 1
                 e[i] = x[i]
     print("Output array")
@@ -87,14 +88,14 @@ def pos_definite(a,seed):
      x_t=transpose(x)
      x1=mat_mult(a,x_t)
      x2=mat_mult(x,x1)
-     while True:
+     while True:#taking random matrix and iteration until condition for positive definite is met
       if x2[0][0]>0:
          print("positive definite")
          return True
          break
       else:
          pos_definite(a, seed + 1)
-def mat_mult(x1,x2):
+def mat_mult(x1,x2):#matrix multiplication
     y=[]
     for i in range(0,len(x1)):
         sum=0
