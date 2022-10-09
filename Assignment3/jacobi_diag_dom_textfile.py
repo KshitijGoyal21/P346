@@ -1,10 +1,11 @@
+#Question 3 Jacobi iteration
 import numpy as np
 def jacobi():
     ctr = 0
-    n = []
+    n = []# temprory storing of numbers
     str_coeff = ''
-    a = []  # temprory storing of numbers
-    b = []
+    a = []  #Input matrix LHS
+    b = []#Input matrix RHS
     # Reading from file
     with open("Assignment3_Q3_data.txt") as file:
         while True:
@@ -75,19 +76,19 @@ def jacobi():
     print(x)
     print("Number of iteration is", ctr)
 
-def swap(a,i,j):
+def swap(a,i,j):#swap for matrix a
     for k in range(0,len(a)):
         temp=a[i][k]
         a[i][k]=a[j][k]
         a[j][k]=temp
     return a
-def swap_b(b,i,j):
+def swap_b(b,i,j):#swap for matrix b
         temp2 = b[i]
         b[i] = b[j]
         b[j]=temp2
         return b
 
-def sum_row(x,sub):
+def sum_row(x,sub):#sum of elements of row except sub
     sum=0
     for i in range(0, len(x)):
         sum+=abs(x[i])
