@@ -1,7 +1,7 @@
 #Question 1 Gauss Jordan
 def GJ_matrix():
     ctr = 0
-    n=[]
+    n=[]#Input augumented matrix
     str_coeff=''#temporary string to read from file
     a=[]#temprory storing of numbers
     #Reading from file
