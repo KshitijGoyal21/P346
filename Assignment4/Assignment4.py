@@ -1,13 +1,12 @@
 import library as lib
 
 def Q1(fn):
-    a = lib.fn_bisection(1.5, 2.5,"",fn)  # The input is the bracketing variables.Bracketing not done. Hence it will return that use bracketing to bracket a root.
-    b = lib.root_reg_fal(1.5, 2.5,"",fn)  # The input is the bracketing variables.Bracketing not done.
+    #no root in the given interval
     print("Using bracketing")
     print("For bisection")
-    a = lib.fn_bisection(1.5, 2.5,"bracketing",fn)  # The input is the bracketing variables
+    a = lib.fn_bisection(1.5, 2.5,fn)  # The input is the interval and function
     print("For regula falsi")
-    b = lib.root_reg_fal(1.5, 2.5,"bracketing",fn)  # The input is the bracketing variables
+    b = lib.root_reg_fal(1.5, 2.5,fn)  # The input is the interval and function
     print("Output from Bisection method", a)
     print("Output from Regula Falsi method", b)
 Q1("(math.log(x/2)-math.sin(5*x/2))")
@@ -41,8 +40,8 @@ Q1("(math.log(x/2)-math.sin(5*x/2))")
 
 def Q2(fn2,fn2_der):
 
-    a=lib.fn_bisection(-1,0,"bracketing",fn2)#The input is the bracketing variables
-    b=lib.root_reg_fal(-1,0,"bracketing",fn2)
+    a=lib.fn_bisection(-1,0,fn2)#The input is the bracketing variables
+    b=lib.root_reg_fal(-1,0,fn2)
     c=lib.newton_rhapson_root(fn2,fn2_der)
     print("Output from Bisection method",a)
     print("Output from Regula Falsi method", b)
