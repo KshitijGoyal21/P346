@@ -6,7 +6,7 @@ def Q1():
     plt.plot(t, v, color = 'green',label="v vs t")
     plt.legend()
     plt.show()
-Q1()
+#Q1()
 
 def Q2():
     x,y=lib.boundary_value_corrected()
@@ -15,7 +15,7 @@ def Q2():
         if abs(y[i] - 100) < 0.1:#to get value of position at temperature 100
             output = x[i]
             break
-    print("x",output)
+    print("x"=output)
     plt.legend()
     plt.show()
 Q2()
@@ -24,14 +24,14 @@ Q2()
 
 def Q3():
     lib.PDE_sol(2,100,4,80000,0,5000)
-Q3()
+#Q3()
 
 def Q4():
     e_val,e_vec,k=lib.e_val("Assignment6_Q4.txt")
     print("Eigenvalues are",e_val)
     print("Eigenvectors are", e_vec)
     print("Number of iterations", k)
-Q4()
+#Q4()
 #OUTPUT
 # Eigenvalues are [[3.99909952]]
 # Eigenvectors are [array([0.70710678]), array([9.91799746e-05]), array([0.70710677])]
