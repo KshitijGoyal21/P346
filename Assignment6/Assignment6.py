@@ -15,12 +15,12 @@ def Q2():
         if abs(y[i] - 100) < 0.1:#to get value of position at temperature 100
             output = x[i]
             break
-    print(output)
+    print("x",output)
     plt.legend()
     plt.show()
 Q2()
 #OUTPUT
-#4.42999999999995
+#x=4.42999999999995
 
 def Q3():
     lib.PDE_sol(2,100,4,80000,0,5000)
