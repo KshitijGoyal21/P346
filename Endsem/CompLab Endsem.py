@@ -30,7 +30,7 @@ Q1()
 
 def Q2():
     #Plotting number of points on the lext box as a function of time for T=200000
-    lib.box2(5000,200000,1)
+    lib.box2(5000,200000,1)#box2 function is therein library
 Q2()
 
 def Q3():
